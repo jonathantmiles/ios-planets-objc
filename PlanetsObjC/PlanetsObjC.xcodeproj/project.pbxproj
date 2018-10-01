@@ -17,15 +17,6 @@
 		F84F11E72162B113003CDDA7 /* JTMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84F11E62162B113003CDDA7 /* JTMSettingsViewController.m */; };
 		F84F11EB2162B2B9003CDDA7 /* JTMPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = F84F11EA2162B2B9003CDDA7 /* JTMPlanet.m */; };
 		F84F11EF2162B2DD003CDDA7 /* JTMPlanetController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84F11EE2162B2DD003CDDA7 /* JTMPlanetController.m */; };
-		F84F11F92162BDAF003CDDA7 /* earth.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F02162BDAE003CDDA7 /* earth.imageset */; };
-		F84F11FA2162BDAF003CDDA7 /* mercury.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F12162BDAE003CDDA7 /* mercury.imageset */; };
-		F84F11FB2162BDAF003CDDA7 /* neptune.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F22162BDAE003CDDA7 /* neptune.imageset */; };
-		F84F11FC2162BDAF003CDDA7 /* jupiter.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F32162BDAE003CDDA7 /* jupiter.imageset */; };
-		F84F11FD2162BDAF003CDDA7 /* saturn.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F42162BDAE003CDDA7 /* saturn.imageset */; };
-		F84F11FE2162BDAF003CDDA7 /* uranus.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F52162BDAE003CDDA7 /* uranus.imageset */; };
-		F84F11FF2162BDAF003CDDA7 /* pluto.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F62162BDAE003CDDA7 /* pluto.imageset */; };
-		F84F12002162BDAF003CDDA7 /* venus.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F72162BDAF003CDDA7 /* venus.imageset */; };
-		F84F12012162BDAF003CDDA7 /* mars.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F84F11F82162BDAF003CDDA7 /* mars.imageset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,15 +38,6 @@
 		F84F11EA2162B2B9003CDDA7 /* JTMPlanet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMPlanet.m; sourceTree = "<group>"; };
 		F84F11ED2162B2DD003CDDA7 /* JTMPlanetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMPlanetController.h; sourceTree = "<group>"; };
 		F84F11EE2162B2DD003CDDA7 /* JTMPlanetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMPlanetController.m; sourceTree = "<group>"; };
-		F84F11F02162BDAE003CDDA7 /* earth.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = earth.imageset; sourceTree = "<group>"; };
-		F84F11F12162BDAE003CDDA7 /* mercury.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mercury.imageset; sourceTree = "<group>"; };
-		F84F11F22162BDAE003CDDA7 /* neptune.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = neptune.imageset; sourceTree = "<group>"; };
-		F84F11F32162BDAE003CDDA7 /* jupiter.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jupiter.imageset; sourceTree = "<group>"; };
-		F84F11F42162BDAE003CDDA7 /* saturn.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = saturn.imageset; sourceTree = "<group>"; };
-		F84F11F52162BDAE003CDDA7 /* uranus.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = uranus.imageset; sourceTree = "<group>"; };
-		F84F11F62162BDAE003CDDA7 /* pluto.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pluto.imageset; sourceTree = "<group>"; };
-		F84F11F72162BDAF003CDDA7 /* venus.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = venus.imageset; sourceTree = "<group>"; };
-		F84F11F82162BDAF003CDDA7 /* mars.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mars.imageset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +89,6 @@
 				F84F11D12162AB4C003CDDA7 /* LaunchScreen.storyboard */,
 				F84F11D42162AB4C003CDDA7 /* Info.plist */,
 				F84F11D52162AB4C003CDDA7 /* main.m */,
-				F84F11F02162BDAE003CDDA7 /* earth.imageset */,
-				F84F11F32162BDAE003CDDA7 /* jupiter.imageset */,
-				F84F11F82162BDAF003CDDA7 /* mars.imageset */,
-				F84F11F12162BDAE003CDDA7 /* mercury.imageset */,
-				F84F11F22162BDAE003CDDA7 /* neptune.imageset */,
-				F84F11F62162BDAE003CDDA7 /* pluto.imageset */,
-				F84F11F42162BDAE003CDDA7 /* saturn.imageset */,
-				F84F11F52162BDAE003CDDA7 /* uranus.imageset */,
-				F84F11F72162BDAF003CDDA7 /* venus.imageset */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,17 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F84F11D32162AB4C003CDDA7 /* LaunchScreen.storyboard in Resources */,
-				F84F11FD2162BDAF003CDDA7 /* saturn.imageset in Resources */,
 				F84F11D02162AB4C003CDDA7 /* Assets.xcassets in Resources */,
-				F84F11FA2162BDAF003CDDA7 /* mercury.imageset in Resources */,
 				F84F11CE2162AB4B003CDDA7 /* Main.storyboard in Resources */,
-				F84F12012162BDAF003CDDA7 /* mars.imageset in Resources */,
-				F84F11FE2162BDAF003CDDA7 /* uranus.imageset in Resources */,
-				F84F11FB2162BDAF003CDDA7 /* neptune.imageset in Resources */,
-				F84F12002162BDAF003CDDA7 /* venus.imageset in Resources */,
-				F84F11FF2162BDAF003CDDA7 /* pluto.imageset in Resources */,
-				F84F11F92162BDAF003CDDA7 /* earth.imageset in Resources */,
-				F84F11FC2162BDAF003CDDA7 /* jupiter.imageset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
