@@ -7,6 +7,7 @@
 //
 
 #import "JTMPlanetsCollectionViewController.h"
+#import "JTMPlanetController.h"
 
 @interface JTMPlanetsCollectionViewController ()
 
@@ -14,19 +15,25 @@
 
 @implementation JTMPlanetsCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil];
+    if (self) {
+        _planetController = [[JTMPlanetController alloc] init];
+    }
+    return self;
 }
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _planetController = [[JTMPlanetController alloc] init];
+    }
+    return self;
+}
+
+static NSString * const reuseIdentifier = @"PlanetCell";
 
 /*
 #pragma mark - Navigation
@@ -40,15 +47,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return [[self planetController] ];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

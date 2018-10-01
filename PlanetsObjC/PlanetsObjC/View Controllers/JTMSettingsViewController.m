@@ -30,6 +30,11 @@
 */
 
 - (IBAction)isPlutoPlanet:(id)sender {
+    if ([sender isOn]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"true" forKey:@"isPlutoAPlanet"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setObject:@"false" forKey:@"isPlutoAPlanet"];
+    }
 }
 
 - (IBAction)done:(id)sender {

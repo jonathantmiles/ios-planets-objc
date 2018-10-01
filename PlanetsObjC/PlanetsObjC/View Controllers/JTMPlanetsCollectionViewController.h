@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class JTMPlanetController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JTMPlanetsCollectionViewController : UICollectionViewController
+
+@property JTMPlanetController *planetController;
 
 @end
 
