@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property JTMPlanetController *planetController;
 
+@property NSArray *planets;
+
 @end
 
 NS_ASSUME_NONNULL_END

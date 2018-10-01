@@ -8,6 +8,8 @@
 
 #import "JTMPlanetsCollectionViewController.h"
 #import "JTMPlanetController.h"
+#import "JTMPlanet.h"
+#import "JTMPlanetCollectionViewCell.h"
 
 @interface JTMPlanetsCollectionViewController ()
 
@@ -33,6 +35,20 @@
     return self;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        BOOL *shouldShowPluto = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPlutoAPlanet"];
+        if (shouldShowPluto) {
+            _planets = [[self planetController] planetsWithPluto];
+        } else {
+            _planets = [[self planetController] planetsWithoutPluto];
+        }
+    }
+    return self;
+}
+
 static NSString * const reuseIdentifier = @"PlanetCell";
 
 /*
@@ -49,46 +65,21 @@ static NSString * const reuseIdentifier = @"PlanetCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[self planetController] ];
+    return [[self planets] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    JTMPlanetCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    JTMPlanet *planet = [[self planets] objectAtIndex:[indexPath item]];
+    
+    [[cell planetImage] setImage:[planet image]];
+    [[cell planetLabel] setText:[planet name]];
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
