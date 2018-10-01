@@ -41,9 +41,9 @@
     if (self) {
         BOOL shouldShowPluto = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPlutoAPlanet"];
         if (shouldShowPluto) {
-            _planets = [[self planetController] planetsWithPluto];
+            _planets = [[NSArray alloc] initWithArray:[_planetController planetsWithPluto]];
         } else {
-            _planets = [[self planetController] planetsWithoutPluto];
+            _planets = [[NSArray alloc] initWithArray:[_planetController planetsWithoutPluto]];
         }
     }
     return self;
@@ -62,6 +62,12 @@ static NSString * const reuseIdentifier = @"PlanetCell";
 */
 
 #pragma mark <UICollectionViewDataSource>
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSUserDefaults standardUserDefaults] setBool: true forKey:@"isPlutoAPlanet"];
+}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
