@@ -39,7 +39,7 @@
 {
     self = [super init];
     if (self) {
-        BOOL *shouldShowPluto = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPlutoAPlanet"];
+        BOOL shouldShowPluto = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPlutoAPlanet"];
         if (shouldShowPluto) {
             _planets = [[self planetController] planetsWithPluto];
         } else {
