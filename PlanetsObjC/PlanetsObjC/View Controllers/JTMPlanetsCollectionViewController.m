@@ -35,18 +35,13 @@
     return self;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        BOOL shouldShowPluto = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPlutoAPlanet"];
-        if (shouldShowPluto) {
-            _planets = [[NSArray alloc] initWithArray:[_planetController planetsWithPluto]];
-        } else {
-            _planets = [[NSArray alloc] initWithArray:[_planetController planetsWithoutPluto]];
-        }
+- (NSArray *)planets {
+    BOOL shouldShowPluto = [[NSUserDefaults standardUserDefaults] boolForKey:@"isPlutoAPlanet"];
+    if (shouldShowPluto) {
+        return [[NSArray alloc] initWithArray:[[self planetController] planetsWithPluto]];
+    } else {
+        return [[NSArray alloc] initWithArray:[[self planetController] planetsWithoutPluto]];
     }
-    return self;
 }
 
 static NSString * const reuseIdentifier = @"PlanetCell";
